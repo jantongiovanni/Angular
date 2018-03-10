@@ -13,7 +13,7 @@ export class SquadService {
     return false;
   }
   getMySquad() {
-    this.httpClient.get('https://jsonplaceholder.typicode.com/users')
+    return this.httpClient.get('https://jsonplaceholder.typicode.com/users')
       .map(
         res => res.json()
     );

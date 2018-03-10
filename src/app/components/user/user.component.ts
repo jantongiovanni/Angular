@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import { SquadService } from '../../services/squad.service';
+//import { SquaddataService } from '../../services/squaddata.service';
 @Component({
   selector: 'app-user',
   templateUrl: './user.component.html',
@@ -58,11 +59,12 @@ deleteHobby(hobby) {
   }
 }
   getSquadFromService() {
-  this.mySquadService.getMySquad()
-    .subscribe((results) => {
-      console.log(results);
-    this.squadMembers = results; 
-    });
+  this.mySquadService.getMySquad().subscribe(data => this.squadMembers = data);
+  //this.mySquadService.getMySquad()
+  //  .subscribe((results) => {
+  //    console.log(results);
+  //  this.squadMembers = results;
+  //  });
   }
 }
 
