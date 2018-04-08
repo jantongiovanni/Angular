@@ -10,7 +10,7 @@ import { UserComponent } from './components/user/user.component';
 import { SquadService} from './services/squad.service';
 import { AboutComponent } from './components/about/about.component';
 
-const myRoutes: Routes = [
+const appRoutes: Routes = [
 {path: '', component: UserComponent},
 {path: 'about', component: AboutComponent}
 ];
@@ -25,7 +25,7 @@ const myRoutes: Routes = [
     BrowserModule,
     FormsModule,
     HttpModule,
-    RouterModule.forRoot(myRoutes)
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [SquadService, ImageapiService],
   bootstrap: [AppComponent]

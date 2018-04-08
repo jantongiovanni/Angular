@@ -10,7 +10,7 @@ export class AboutComponent implements OnInit {
 
   gettyImageUri: string;
   gettyResult: any;
-  
+
   constructor(private imageApi: ImageapiService) { }
 
   ngOnInit() {
@@ -22,7 +22,7 @@ export class AboutComponent implements OnInit {
   }
 }
 
-interface GettyResult{
+interface GettyResult {
   result_count: number;
   images: Image[];
 }
